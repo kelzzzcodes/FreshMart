@@ -1,11 +1,11 @@
 import React from 'react'
-import logo from './logo.svg'
 import './App.css'
+import Welcome from './components/Welcome'
 
 function App() {
   return (
     <div className="App">
-      <h1>Welcome to FarmStead</h1>
+      <Welcome title='FreshMart'/>
     </div>
   )
 }
