@@ -1,12 +1,8 @@
-name: CI
+name: Build Process
 
-on:
-  push:
+ push:
     branches:
-      - main  # or the branch you want to trigger the workflow on
-  pull_request:
-    branches:
-      - main  # or the branch you want to trigger the workflow on
+      - main
 
 jobs:
   test:
