@@ -1,0 +1,15 @@
+@use "../../index";
+
+.navbar {
+    height: 120px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+        color: #228b22;
+        font-size: 24px;
+        font-family: index.$font-merriweather;
+    }
+}
