@@ -9,10 +9,11 @@ describe('Landing Component', () => {
     render(
       <TestWrapper>
         <Landing />
-      </TestWrapper>
+      </TestWrapper>,
     )
 
-    const welcomeMessage = screen.getByText(/Welcome to FreshMart/i)
-    expect(welcomeMessage).toBeInTheDocument()
+    // Check if the LandingHero component is rendered
+    const landingHero = screen.getByTestId('landing-hero')
+    expect(landingHero).toBeInTheDocument()
   })
 })

@@ -1,0 +1,100 @@
+@use "../../index.module";
+
+.landingHero {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    &__left {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        h1 {
+            font-size: 80px;
+            font-weight: 700;
+            font-family: index.$font-merriweather;
+            margin-top: 5rem;
+            span {
+                color: index.$forestGreen;
+            }
+        }
+        p {
+            font-weight: 500;
+            font-size: 24px;
+            color: index.$greySubText;
+            line-height: 40px;
+        }
+        ul {
+            display: flex;
+            li {
+                display: flex;
+                align-items: center;
+                font-size: 18px;
+                font-family: index.$font-poppins;
+                color: index.$secondary-text;
+            }
+        }
+    }
+
+    &__right {
+        flex: 1;
+
+        display: flex;
+        img {
+            display: flex;
+            height: 766px;
+            align-items: center;
+            justify-content: center;
+            justify-items: center;
+            margin: 0 auto;
+        }
+    }
+
+    .heroButton {
+        padding: 10px 20px;
+        font-size: 18px;
+        border-radius: 12px;
+
+        &__text {
+            font-size: 24px;
+            font-weight: 600px;
+            font-family: index.$font-poppins;
+        }
+    }
+
+    // Large screens like laptops
+    @media (max-width: 992px) {
+        &__right {
+            display: none; // Hide the right section
+        }
+        &__left {
+            flex: 1; // Take up the whole space
+        }
+    }
+    /* Medium screens like tablets */
+    @media (max-width: 768px) {
+        &__left {
+            h1 {
+                font-size: 40px;
+                font-weight: 700;
+
+                margin-top: 2rem;
+            }
+
+            p {
+                font-weight: 500;
+                font-size: 16px;
+                color: index.$greySubText;
+                line-height: 20px;
+            }
+        }
+    }
+    ul {
+        li {
+            font-size: 12px;
+            img {
+                width: 24px;
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+@use "../../../index.module";
+
+.button {
+  background-color: index.$forestGreen;
+  // color: white;
+  border: none;
+
+  .text {
+    background-color: inherit ;
+    color: white;
+  }
+}
