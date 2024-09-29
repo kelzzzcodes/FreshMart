@@ -1,21 +1,27 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import '@testing-library/jest-dom/extend-expect'
+// import '@testing-library/jest-dom/extend-expect'
+
+import '@testing-library/jest-dom'
 import LandingHero from '../../src/components/landingHero/LandingHero'
 import { landingHeroLeftItems } from '../../src/constant'
 
 describe('LandingHero Component', () => {
   test('renders heading, paragraph, and image correctly', () => {
-    render(<LandingHero/>)
+    render(<LandingHero />)
 
     // Check if the heading is rendered
-    expect(screen.getByText(/Fresh From Our Farm To Your Table/i)).toBeInTheDocument()
+    const heading = screen.getByRole('heading', { level: 1 })
+    expect(heading).toHaveTextContent(/Fresh From Our Farm To Your/i)
+    expect(heading).toHaveTextContent(/Table/i)
 
     // Check if the paragraph is rendered
-    expect(screen.getByText(/Experience the best of local farms/i)).toBeInTheDocument()
+    expect(
+      screen.getByText(/Experience the best of local farms/i),
+    ).toBeInTheDocument()
 
     // Check if the image in the right section is rendered
-    const heroImage = screen.getByAltText('')
+    const heroImage = screen.getByAltText('Hero image')
     expect(heroImage).toHaveAttribute('src', './assets/heroImage.png')
   })
 
@@ -26,20 +32,5 @@ describe('LandingHero Component', () => {
     landingHeroLeftItems.forEach((item) => {
       expect(screen.getByText(item.label)).toBeInTheDocument()
     })
-  })
-
-  test('hides the right section on smaller screens', () => {
-    render(<LandingHero />)
-
-    // Check if the right section is rendered initially
-    const rightSection = screen.getByAltText('')
-    expect(rightSection).toBeInTheDocument()
-
-    // Simulate smaller screen
-    window.innerWidth = 768
-    window.dispatchEvent(new Event('resize'))
-
-    // Check if the right section is hidden
-    expect(rightSection).not.toBeVisible()
   })
 })

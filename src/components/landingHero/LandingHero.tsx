@@ -23,7 +23,7 @@ const LandingHero = () => {
         </ul>
       </div>
       <div className={styles.landingHero__right}>
-        <img src="./assets/heroImage.png" />
+        <img src="./assets/heroImage.png" alt="Hero image" />
       </div>
     </section>
   )

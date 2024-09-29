@@ -1,5 +1,5 @@
 /** @type {import('ts-jest').JestConfigWithTsJest} **/
-module.exports = {
+const config: import('ts-jest').JestConfigWithTsJest = {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
   transform: {
@@ -10,3 +10,5 @@ module.exports = {
   },
   setupFilesAfterEnv: ['./test/setup.ts'],
 }
+
+export default config
