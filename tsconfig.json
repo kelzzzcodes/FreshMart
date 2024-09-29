@@ -4,7 +4,7 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
-   "types": ["jest", "@testing-library/jest-dom"],
+   "types": ["jest", "@testing-library/jest-dom","node"],
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
@@ -17,5 +17,5 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-"include": ["src", "test"]
+"include": ["src", "test"],
 }
