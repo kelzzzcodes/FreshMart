@@ -1,100 +1,150 @@
 @use "../../index.module";
 
 .landingHero {
-    height: 100vh;
+    height: auto;
     display: flex;
-    flex-direction: row;
-    &__left {
-        flex: 1;
+    flex-direction: column;
+    &__top {
         display: flex;
-        flex-direction: column;
-        gap: 10px;
-        h1 {
-            font-size: 80px;
-            font-weight: 700;
-            font-family: index.$font-merriweather;
-            margin-top: 5rem;
-            span {
-                color: index.$forestGreen;
-            }
-        }
-        p {
-            font-weight: 500;
-            font-size: 24px;
-            color: index.$greySubText;
-            line-height: 40px;
-        }
-        ul {
+
+        .left {
+            flex: 1;
             display: flex;
-            li {
+            flex-direction: column;
+            gap: 10px;
+            padding-bottom: 10px;
+            h1 {
+                font-size: 80px;
+                font-weight: 700;
+                font-family: index.$font-merriweather;
+                margin-top: 5rem;
+                span {
+                    color: index.$forestGreen;
+                }
+            }
+            p {
+                font-weight: 500;
+                font-size: 24px;
+                color: index.$greySubText;
+                line-height: 40px;
+            }
+            ul {
                 display: flex;
-                align-items: center;
-                font-size: 18px;
-                font-family: index.$font-poppins;
-                color: index.$secondary-text;
+                li {
+                    display: flex;
+                    align-items: center;
+                    font-size: 18px;
+                    font-family: index.$font-poppins;
+                    color: index.$secondary-text;
+                }
+            }
+        }
+
+        .right {
+            flex: 1;
+            display: flex;
+            position: relative;
+            img {
+                height: 650px;
+                position: absolute;
+                z-index: -1;
+            }
+        }
+
+        // Large screens like laptops
+        @media (max-width: 992px) {
+            .right {
+                display: none;
+            }
+            .left {
+                flex: 1;
+            }
+        }
+        /* Medium screens like tablets */
+        @media (max-width: 768px) {
+            &__left {
+                h1 {
+                    font-size: 40px;
+                    font-weight: 700;
+
+                    margin-top: 2rem;
+                }
+
+                p {
+                    font-weight: 500;
+                    font-size: 16px;
+                    color: index.$greySubText;
+                    line-height: 20px;
+                }
+                ul {
+                    li {
+                        font-size: 12px;
+                        img {
+                            width: 24px;
+                        }
+                    }
+                }
             }
         }
     }
 
-    &__right {
-        flex: 1;
-
+    &__bottom {
+        height: 282px;
+        background-color: index.$light-glass;
+        border-radius: 16px;
+        width: 100%;
+        padding: 32px;
         display: flex;
-        img {
+        justify-content: center;
+        gap: 10px;
+        margin-top: 100px;
+
+        .carousel {
+            min-width: 300px;
+            height: 218px;
             display: flex;
-            height: 766px;
-            align-items: center;
-            justify-content: center;
-            justify-items: center;
-            margin: 0 auto;
-        }
-    }
+            flex-direction: column;
+            justify-content: space-evenly;
 
-    .heroButton {
-        padding: 10px 20px;
-        font-size: 18px;
-        border-radius: 12px;
-
-        &__text {
-            font-size: 24px;
-            font-weight: 600px;
-            font-family: index.$font-poppins;
+            > img {
+                width: 96px;
+                height: 96px;
+                object-fit: contain;
+            }
+            > h3 {
+                font-size: 24px;
+                color: index.$primaryText;
+                font-family: index.$font-poppins;
+            }
+            > p {
+                font-size: 18px;
+                color: index.$greySubText;
+                font-family: index.$font-poppins;
+            }
         }
+
+        //  .swiper-pagination {
+        //   position: relative;
+        //   margin-top: 20px !important; // Adjusting margin-top for pagination
+
+        //   .swiper-pagination-bullet {
+        //     background-color: #999999; // Inactive bullet color
+        //     width: 16px; // Custom bullet size
+        //     height: 16px;
+        //     opacity: 1; // Make bullets fully visible
+        //     margin-right: 10px; // Gap between bullets
+        //   }
+
+        //   .swiper-pagination-bullet-active {
+        //     background-color: #ffba08; // Active bullet color
+        //   }
+        // }
     }
 
     // Large screens like laptops
     @media (max-width: 992px) {
-        &__right {
-            display: none; // Hide the right section
-        }
-        &__left {
-            flex: 1; // Take up the whole space
-        }
-    }
-    /* Medium screens like tablets */
-    @media (max-width: 768px) {
-        &__left {
-            h1 {
-                font-size: 40px;
-                font-weight: 700;
-
-                margin-top: 2rem;
-            }
-
-            p {
-                font-weight: 500;
-                font-size: 16px;
-                color: index.$greySubText;
-                line-height: 20px;
-            }
-        }
-    }
-    ul {
-        li {
-            font-size: 12px;
-            img {
-                width: 24px;
-            }
+        &__bottom {
+            margin-top: 100px;
         }
     }
 }
