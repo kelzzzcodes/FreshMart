@@ -1,11 +1,7 @@
-import React from 'react'
 import styles from './LandingHero.module.scss'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules'
-import 'swiper/css'
-import 'swiper/css/navigation'
-import 'swiper/css/pagination'
-import 'swiper/css/scrollbar'
+import { Pagination, A11y } from 'swiper/modules'
+import 'swiper/swiper-bundle.css'
 
 import { landingHeroCardItems, landingHeroLeftItems } from '../../constant'
 
@@ -56,15 +52,6 @@ const LandingHero = () => {
               slidesPerView: 4,
             },
           }}
-          // style={{
-
-          //   '--swiper-pagination-color': '#FFBA08',
-          //   '--swiper-pagination-bullet-inactive-color': '#999999',
-          //   '--swiper-pagination-bullet-inactive-opacity': '1',
-          //   '--swiper-pagination-bullet-size': '16px',
-          //   '--swiper-pagination-bullet-horizontal-gap': '10px',
-
-          // }}
         >
           {landingHeroCardItems.map((item) => (
             <SwiperSlide key={item.key}>
