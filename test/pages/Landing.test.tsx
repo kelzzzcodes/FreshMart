@@ -12,7 +12,6 @@ describe('Landing Component', () => {
       </TestWrapper>,
     )
 
-    // Check if the LandingHero component is rendered
     const landingHero = screen.getByTestId('landing-hero')
     expect(landingHero).toBeInTheDocument()
   })

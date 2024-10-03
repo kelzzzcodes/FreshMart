@@ -17,5 +17,7 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-"include": ["src", "test"],
+"include": ["src", "test"],// Adjust to your source files path
+  "exclude": ["node_modules"]
+
 }
