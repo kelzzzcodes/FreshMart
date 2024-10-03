@@ -11,12 +11,10 @@ describe('Navbar Component', () => {
       </BrowserRouter>,
     )
 
-    // Check if the logo link is in the document
     const logoElement = screen.getByText(/FreshMart/i)
     expect(logoElement).toBeInTheDocument()
     expect(logoElement.closest('a')).toHaveAttribute('href', '/')
 
-    // Check if the hamburger menu with the specific id is in the document
     const hamburgerIcon = screen.getByTestId('hamburger-icon')
     expect(hamburgerIcon).toBeInTheDocument()
   })
