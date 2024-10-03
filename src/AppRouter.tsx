@@ -6,14 +6,12 @@ import About from './_root/pages/about/About'
 
 const AppRouter = () => {
   return (
-    <>
-      <Routes>
-        <Route element={<RootLayout />}>
-          <Route path="/" element={<Landing />} />
-          <Route path="/about" element={<About />} />
-        </Route>
-      </Routes>
-    </>
+    <Routes>
+      <Route element={<RootLayout />}>
+        <Route path="/" element={<Landing />} />
+        <Route path="/about" element={<About />} />
+      </Route>
+    </Routes>
   )
 }
 
