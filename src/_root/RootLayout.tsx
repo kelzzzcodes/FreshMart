@@ -1,7 +1,6 @@
-// src/_root/RootLayout.tsx
 import React from 'react'
-import Navbar from '../components/navbar/Navbar'
 import { Outlet } from 'react-router-dom'
+import { Navbar } from '../components'
 
 interface RootLayoutProps {
   children?: React.ReactNode
@@ -10,7 +9,7 @@ interface RootLayoutProps {
 const RootLayout = ({ children } : RootLayoutProps) => {
   return (
     <div className="">
-      <Navbar />
+      <Navbar/>
       <main>
         {children}
         <Outlet /> {/* This will render nested routes */}
