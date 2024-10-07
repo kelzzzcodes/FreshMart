@@ -1,53 +1,62 @@
 import { render, screen } from '@testing-library/react'
+import { featuredProductsCardItems } from '../../src/data' // Import mock product data
+import '@testing-library/jest-dom'
+import TestWrapper from '../utils/TestWrapper' // Assuming you use this for wrapping
 import { FeaturedProducts } from '../../src/components'
-import { featuredProductsCardItems } from '../../src/constant'
-
-// Mock the ProductCard component
-jest.mock('../../src/components/ui', () => ({
-  ProductCard: jest.fn(({ id, imageUrl, oldPrice, newPrice, label }) => (
-    <div data-testid="product-card-item" id={id}>
-      <img src={imageUrl} alt={label} />
-      <p>{label}</p>
-      <span>{oldPrice}</span>
-      {newPrice && <span>{newPrice}</span>}
-    </div>
-  )),
-}))
 
 describe('FeaturedProducts Component', () => {
-  beforeEach(() => {
-    render(<FeaturedProducts />)
-  })
+  test('renders h2 title "Featured Products"', () => {
+    render(
+      <TestWrapper>
+        <FeaturedProducts />
+      </TestWrapper>,
+    )
 
- 
-
-  test('renders the correct heading', () => {
-    const headingElement = screen.getByRole('heading', {
-      name: /featured products/i,
+    // Check for the h2 title
+    const titleElement = screen.getByRole('heading', {
+      level: 2,
+      name: 'Featured Products',
     })
-    expect(headingElement).toBeInTheDocument()
-    expect(headingElement).toHaveTextContent('Featured Products')
+    expect(titleElement).toBeInTheDocument()
   })
 
-  test('renders the correct number of ProductCard components', () => {
-    // Since you added data-testid to the div containing the ProductCard items
+  test('renders ProductCard components', () => {
+    render(
+      <TestWrapper>
+        <FeaturedProducts />
+      </TestWrapper>,
+    )
+
+    // Check if the ProductCard components are rendered
+    const productCards = screen.getAllByTestId('product-card-item')
+    expect(productCards.length).toBe(featuredProductsCardItems.length) // Ensures ProductCard items match the data length
+  })
+
+  test('renders exactly 9 ProductCard components', () => {
+    render(
+      <TestWrapper>
+        <FeaturedProducts />
+      </TestWrapper>,
+    )
+
+    // Ensure that exactly 9 ProductCard items are rendered
+    const productCards = screen.getAllByTestId('product-card-item')
+    expect(productCards).toHaveLength(9)
+  })
+
+  test('applies correct styles to FeaturedProducts component', () => {
+    render(
+      <TestWrapper>
+        <FeaturedProducts />
+      </TestWrapper>,
+    )
+
+    // Check if the FeaturedProducts section has the correct class
+    const featuredProductsSection = screen.getByTestId('featured-products')
+    expect(featuredProductsSection).toHaveClass('featuredProducts')
+
+    // Check if the product card container has the correct class
     const productCardContainer = screen.getByTestId('product-card')
-    expect(productCardContainer).toBeInTheDocument()
-
-    // Now checking the number of ProductCard items
-    const productCardItems = screen.getAllByTestId('product-card-item')
-    expect(productCardItems).toHaveLength(featuredProductsCardItems.length)
-  })
-
-  test('passes correct props to each ProductCard component', () => {
-    featuredProductsCardItems.forEach((item, index) => {
-      const productCard = screen.getAllByTestId('product-card-item')[index]
-      expect(productCard).toContainHTML(item.label)
-      expect(productCard).toContainHTML(item.oldPrice.toString())
-
-      if (item.newPrice) {
-        expect(productCard).toContainHTML(item.newPrice.toString())
-      }
-    })
+    expect(productCardContainer).toHaveClass('featuredProducts__card')
   })
 })

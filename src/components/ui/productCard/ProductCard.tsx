@@ -15,7 +15,7 @@ const ProductCard = ({
   newPrice,
 }: ProductCardProps) => {
   return (
-    <div className={styles.productCard}>
+    <div data-testid="product-card-item" className={styles.productCard}>
       <img src={imageUrl} alt={id} />
 
       <div className={styles.productCard__content}>

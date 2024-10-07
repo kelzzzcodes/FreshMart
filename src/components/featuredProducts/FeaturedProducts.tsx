@@ -1,6 +1,6 @@
 import styles from './FeaturedProducts.module.scss'
 import { ProductCard } from '../ui'
-import { featuredProductsCardItems } from '../../constant'
+import { featuredProductsCardItems } from '../../data'
 
 const FeaturedProducts = () => {
   return (
@@ -9,7 +9,7 @@ const FeaturedProducts = () => {
       className={styles.featuredProducts}
     >
       <h2>Featured Products</h2>
-      <div className={styles.featuredProducts__card} data-testid="product-card">
+      <div data-testid="product-card" className={styles.featuredProducts__card}>
         {featuredProductsCardItems.map((item) => (
           <ProductCard
             key={item.key}
