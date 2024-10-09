@@ -11,7 +11,6 @@ const config: import('ts-jest').JestConfigWithTsJest = {
     '\\.module\\.scss$': 'identity-obj-proxy',
     '\\.scss$': 'identity-obj-proxy',
     '\\.(css)$': 'identity-obj-proxy',
-    '^@/ui(.*)$': '<rootDir>/src/components/ui$1',
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   setupFilesAfterEnv: ['./test/setup.ts'],
