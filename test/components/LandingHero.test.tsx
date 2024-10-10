@@ -1,7 +1,5 @@
 import React, { ReactNode } from 'react'
 import { render, screen } from '@testing-library/react'
-// import '@testing-library/jest-dom/extend-expect'
-
 import '@testing-library/jest-dom'
 import LandingHero from '../../src/components/landingHero/LandingHero'
 import { landingHeroLeftItems } from '../../src/data'
