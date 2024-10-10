@@ -1,0 +1,47 @@
+@use "../../index.module";
+
+.personalisedRecommendation {
+    margin-top: 5rem;
+    background-color: index.$personalised-bg;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 46px 0;
+        width: 55%;
+        margin: 0 auto;
+        text-align: center;
+        > h2 {
+            font-family: index.$font-merriweather;
+            font-size: 48px;
+            font-weight: 700;
+            color: index.$foundation-green;
+        }
+        > p {
+            font-size: 18px;
+            font-family: index.$font-poppins;
+            color: index.$foundation-text;
+        }
+    }
+
+    // Media query for small devices
+    @media (max-width: 600px) {
+        .personalisedRecommendation__container {
+            width: 95%; // Wider width for small devices
+            > h2 {
+                font-size: 24px;
+            }
+            > p {
+                font-size: 12px;
+            }
+        }
+    }
+
+    // Media query for medium devices
+    @media (min-width: 601px) and (max-width: 768px) {
+        .personalisedRecommendation__container {
+            width: 80%; // Wider width for medium devices
+        }
+    }
+}
