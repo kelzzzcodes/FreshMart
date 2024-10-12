@@ -1,0 +1,24 @@
+@use "../../index.module";
+
+.testimonials {
+    background-color: #fff;
+    height: 20vh;
+    margin-top: 5rem;
+    &__container {
+        padding: 76px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        > h2 {
+            font-size: 40px;
+            font-weight: 700px;
+            font-family: index.$font-merriweather;
+            color: #192127;
+        }
+
+        &__card {
+            margin-top: 3rem;
+        }
+    }
+}

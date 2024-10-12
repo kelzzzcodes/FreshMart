@@ -71,3 +71,18 @@ export const landingHeroCardItems = [
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
   },
 ]
+
+export const testimonialCardItems = [
+  {
+    key: 'raj',
+    imageUrl: './assets/Rectangle.png',
+    label: 'Raj Patel',
+    description: 'The organic fruits are incredibly fresh.',
+  },
+  {
+    key: 'laura',
+    imageUrl: './assets/Rectangle(1).png',
+    label: 'Laura KIm',
+    description: "Best service and quality I've ever had.",
+  },
+]
