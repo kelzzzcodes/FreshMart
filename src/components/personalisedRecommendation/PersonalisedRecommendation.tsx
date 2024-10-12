@@ -11,6 +11,8 @@ const PersonalisedRecommendation = () => {
           and discover recipes, all with the help of our AI assistant
         </p>
       </div>
+
+      <img src="/assets/personalisedStroke.svg" alt="Personalized Icon" />
     </section>
   )
 }

@@ -2,7 +2,8 @@
 
 .personalisedRecommendation {
     margin-top: 5rem;
-    background-color: index.$personalised-bg;
+    background-color: index.$white-bg;
+    position: relative;
 
     &__container {
         display: flex;
@@ -10,6 +11,7 @@
         gap: 1rem;
         padding: 46px 0;
         width: 55%;
+
         margin: 0 auto;
         text-align: center;
         > h2 {
@@ -23,6 +25,12 @@
             font-family: index.$font-poppins;
             color: index.$foundation-text;
         }
+    }
+
+    > img {
+        position: absolute;
+        right: 0;
+        top: 0;
     }
 
     // Media query for small devices

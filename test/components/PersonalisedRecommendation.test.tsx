@@ -34,4 +34,11 @@ describe('PersonalisedRecommendation Component', () => {
       styles.personalisedRecommendation__container,
     )
   })
+  test('renders an img tag with the correct alt text', () => {
+    render(<PersonalisedRecommendation />) // Render the component
+
+    // Check if the img tag is present and has the correct alt text
+    const imgElement = screen.getByRole('img', { name: /Personalized Icon/i }) // Adjust the alt text as necessary
+    expect(imgElement).toBeInTheDocument()
+  })
 })
