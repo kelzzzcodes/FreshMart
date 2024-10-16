@@ -4,7 +4,11 @@ import styles from './PersonalisedRecommendation.module.scss'
 const PersonalisedRecommendation = () => {
   console.log(styles)
   return (
-    <section role="region" className={styles.personalisedRecommendation}>
+    <section
+      data-testid="personalised-recommendation"
+      role="region"
+      className={styles.personalisedRecommendation}
+    >
       <div className={styles.personalisedRecommendation__container}>
         <h2>Your Smart Farm Shopping Companion</h2>
         <p>

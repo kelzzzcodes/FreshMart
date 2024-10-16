@@ -1,12 +1,16 @@
 import React from 'react'
-import LandingHero from '../../../components/landingHero/LandingHero'
-import PersonalisedRecommendation from '../../../components/personalisedRecommendation/PersonalisedRecommendation'
+import {
+  FeaturedProducts,
+  LandingHero,
+  PersonalisedRecommendation,
+} from '../../../components'
 
 const Landing = () => {
   return (
     <section data-testid="landing-hero">
-      <LandingHero />
-      <PersonalisedRecommendation/>
+      <LandingHero data-testid="landing-hero" />
+      <FeaturedProducts data-testid="featured-products" />
+      <PersonalisedRecommendation data-testid="personalised-recommendation" />
     </section>
   )
 }
