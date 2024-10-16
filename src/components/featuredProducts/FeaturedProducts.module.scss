@@ -1,0 +1,47 @@
+@use "../../index.module";
+
+.featuredProducts {
+    margin-top: 5rem;
+
+    & h2 {
+        font-size: 24px;
+        font-family: index.$font-merriweather;
+        font-weight: 700;
+        color: index.$header-text;
+    }
+
+    &__card {
+        margin-top: 8rem;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        column-gap: 1rem; /* gap on the x-axis */
+        row-gap: 8rem; /* gap on the y-axis */
+    }
+
+    @media (min-width: 320px) {
+        &__card {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (min-width: 640px) {
+        & h2 {
+            font-size: 40px;
+        }
+        &__card {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    @media (min-width: 1024px) {
+        &__card {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    @media (min-width: 1280px) {
+        &__card {
+            grid-template-columns: repeat(5, 1fr);
+        }
+    }
+}

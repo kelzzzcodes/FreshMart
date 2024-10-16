@@ -9,6 +9,13 @@ $greySubText: #8a8a8a;
 $primaryText: #36454f;
 $secondary-text: #82828b;
 $light-glass: #ffffffcc;
+$header-text: #192127;
+$card-bg: #ffffff;
+$card-shadow:
+    0px 16px 32px -4px #919eab3d,
+    0px 0px 4px 0px #919eab3d;
+
+$text-old-pricing: #ff8d29;
 
 *,
 *::before,
@@ -33,14 +40,12 @@ body {
     }
 }
 
-
 html,
 body {
     height: 100%;
     width: 100%;
     overflow-x: hidden;
 }
-
 
 a {
     text-decoration: none;
@@ -56,7 +61,6 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
-
 
 button {
     border: none;

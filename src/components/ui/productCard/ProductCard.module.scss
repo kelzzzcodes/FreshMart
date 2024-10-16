@@ -1,0 +1,50 @@
+@use "../../../index.module";
+.productCard {
+    height: 200px;
+    background-color: index.$card-bg;
+    box-shadow: index.$card-shadow;
+    border-radius: 16px;
+    position: relative;
+    padding: 4px;
+
+    img {
+        position: absolute;
+        top: -50%; /* Moves half the image outside the card */
+        left: 50%;
+        transform: translateX(-50%);
+        height: auto;
+        border-radius: 16px;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        margin-top: 6rem;
+        justify-content: space-between;
+
+        &__left {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            &__pricing {
+                display: flex;
+                margin-left: -4px;
+                font-size: 12px;
+                color: index.$header-text;
+                p {
+                    color: index.$text-old-pricing;
+                    text-decoration: line-through;
+                }
+
+                span {
+                    color: index.$secondary-text;
+                }
+            }
+            > p {
+                font-family: index.$font-poppins;
+                font-weight: 500;
+                font-size: 14px;
+            }
+        }
+    }
+}
