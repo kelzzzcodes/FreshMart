@@ -1,7 +1,7 @@
 @use "../../../index.module";
 .productCard {
     height: 200px;
-    background-color: index.$card-bg;
+    background-color: index.$white-bg;
     box-shadow: index.$card-shadow;
     border-radius: 16px;
     position: relative;
