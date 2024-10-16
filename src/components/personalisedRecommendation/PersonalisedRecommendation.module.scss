@@ -31,12 +31,13 @@
         position: absolute;
         right: 0;
         top: 0;
+        width: 25%;
     }
 
     // Media query for small devices
     @media (max-width: 600px) {
         .personalisedRecommendation__container {
-            width: 95%; // Wider width for small devices
+            width: 80%; // Wider width for small devices
             > h2 {
                 font-size: 24px;
             }

@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './PersonalisedRecommendation.module.scss'
 
 const PersonalisedRecommendation = () => {
+  console.log(styles)
   return (
     <section role="region" className={styles.personalisedRecommendation}>
       <div className={styles.personalisedRecommendation__container}>
