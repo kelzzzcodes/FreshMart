@@ -75,14 +75,38 @@ export const landingHeroCardItems = [
 export const testimonialCardItems = [
   {
     key: 'raj',
-    imageUrl: './assets/Rectangle.png',
-    label: 'Raj Patel',
-    description: 'The organic fruits are incredibly fresh.',
+    imageUrl: './assets/Raj.png',
+    name: 'Raj Patel',
+    description: 'FarmAlly’s sellers are always top-notch! Incredible platform',
   },
   {
     key: 'laura',
-    imageUrl: './assets/Rectangle(1).png',
-    label: 'Laura KIm',
+    imageUrl: './assets/Laura.png',
+    name: 'Laura KIm',
+    description: "Best service and quality I've ever had.",
+  },
+  {
+    key: 'aj',
+    imageUrl: './assets/Raj.png',
+    name: 'Raj Patel',
+    description: 'FarmAlly’s sellers are always top-notch! Incredible platform',
+  },
+  {
+    key: 'aura',
+    imageUrl: './assets/Laura.png',
+    name: 'Laura KIm',
+    description: "Best service and quality I've ever had.",
+  },
+  {
+    key: 'j',
+    imageUrl: './assets/Raj.png',
+    name: 'Raj Patel',
+    description: 'FarmAlly’s sellers are always top-notch! Incredible platform',
+  },
+  {
+    key: 'ura',
+    imageUrl: './assets/Laura.png',
+    name: 'Laura KIm',
     description: "Best service and quality I've ever had.",
   },
 ]

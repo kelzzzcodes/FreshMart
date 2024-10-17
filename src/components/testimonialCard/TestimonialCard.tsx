@@ -2,23 +2,25 @@ import React from 'react'
 import styles from './TestimonialCard.module.scss'
 
 interface TestimonialCardProps {
-  imageSrc: string
+  imageUrl: string
   name: string
-  rating: number
   description: string
 }
 
-const TestimonialCard = ( {imageUrl, label,ratng}) => {
+const TestimonialCard = ({
+  imageUrl,
+  name,
+  description,
+}: TestimonialCardProps) => {
   return (
     <div className={styles.testimonialCard}>
       <div className={styles.testimonialCard__top}>
-        <img  src='' alt="cardImage" />
+        <img src={imageUrl} alt={name}/>
         <ul>
-          <li>name</li>
-          <li>rating</li>
+          <li>{name}</li>
         </ul>
       </div>
-      <p>descrition</p>
+      <p>{description}</p>
     </div>
   )
 }
