@@ -22,4 +22,10 @@ describe('Landing Component', () => {
     const featuredProductsComponent = screen.getByTestId('featured-products')
     expect(featuredProductsComponent).toBeInTheDocument()
   })
+
+  test('renders PersonalisedRecommendation component', () => {
+    // Check if PersonalisedRecommendation is rendered
+    const personalisedRecommendation = screen.getByTestId('personalised-recommendation')
+    expect(personalisedRecommendation).toBeInTheDocument()
+  })
 })
