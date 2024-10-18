@@ -1,0 +1,5 @@
+@use "../../index.module";
+
+.footer {
+    background-color: index.$footer-bg;
+}
