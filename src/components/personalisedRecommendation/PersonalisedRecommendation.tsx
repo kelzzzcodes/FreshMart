@@ -2,7 +2,6 @@ import React from 'react'
 import styles from './PersonalisedRecommendation.module.scss'
 
 const PersonalisedRecommendation = () => {
-  console.log(styles)
   return (
     <section
       data-testid="personalised-recommendation"
