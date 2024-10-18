@@ -2,8 +2,7 @@ import styles from './LandingHero.module.scss'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination, A11y } from 'swiper/modules'
 import 'swiper/swiper-bundle.css'
-
-import { landingHeroCardItems, landingHeroLeftItems } from '../../constant'
+import { landingHeroCardItems, landingHeroLeftItems } from '../../data'
 
 const LandingHero = () => {
   return (
