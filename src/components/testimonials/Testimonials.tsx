@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './Testimonials.module.scss'
-import TestimonialCard from '../testimonialCard/TestimonialCard'
-import { testimonialCardItems } from '../../constant'
+import TestimonialCard from '../ui/testimonialCard/TestimonialCard'
+import { testimonialCardItems } from '../../data'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination, A11y, Navigation } from 'swiper/modules'
 
@@ -9,8 +9,11 @@ import 'swiper/swiper-bundle.css'
 
 const Testimonials = () => {
   return (
-    <section className={styles.testimonials}>
-      <div className={styles.testimonials__container}>
+    <section data-testid="testimonials-section" className={styles.testimonials}>
+      <div
+        data-testid="testimonials-container"
+        className={styles.testimonials__container}
+      >
         <img src="./assets/testimonialStroke.svg" alt="testimonialStroke" />
         <h2>Hear from our awesome Customers!</h2>
         <div className={styles.testimonials__container__card}>
@@ -36,9 +39,9 @@ const Testimonials = () => {
             }}
           >
             {testimonialCardItems.map((item) => (
-              <SwiperSlide key={item.name}>
+              <SwiperSlide key={item.id}>
                 <TestimonialCard
-                  key={item.name}
+                  id={item.id}
                   name={item.name}
                   imageUrl={item.imageUrl}
                   description={item.description}

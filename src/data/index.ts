@@ -138,3 +138,41 @@ export const featuredProductsCardItems = [
   },
 ]
 
+export const testimonialCardItems = [
+  {
+    id: 'raj',
+    imageUrl: './assets/Raj.png',
+    name: 'Raj Patel',
+    description: 'FarmAlly’s sellers are always top-notch! Incredible platform',
+  },
+  {
+    id: 'laura',
+    imageUrl: './assets/Laura.png',
+    name: 'Laura KIm',
+    description: "Best service and quality I've ever had.",
+  },
+  {
+    id: 'aj',
+    imageUrl: './assets/Raj.png',
+    name: 'Raj Patel',
+    description: 'FarmAlly’s sellers are always top-notch! Incredible platform',
+  },
+  {
+    id: 'aura',
+    imageUrl: './assets/Laura.png',
+    name: 'Laura Kim',
+    description: "Best service and quality I've ever had.",
+  },
+  {
+    id: 'j',
+    imageUrl: './assets/Raj.png',
+    name: 'Raj Patel',
+    description: 'FarmAlly’s sellers are always top-notch! Incredible platform',
+  },
+  {
+    id: 'ura',
+    imageUrl: './assets/Laura.png',
+    name: 'Laura KIm',
+    description: "Best service and quality I've ever had.",
+  },
+]

@@ -3,8 +3,8 @@ import {
   FeaturedProducts,
   LandingHero,
   PersonalisedRecommendation,
+  Testimonials,
 } from '../../../components'
-import Testimonials from '../../../components/testimonials/Testimonials'
 
 const Landing = () => {
   return (
@@ -12,7 +12,7 @@ const Landing = () => {
       <LandingHero data-testid="landing-hero" />
       <FeaturedProducts data-testid="featured-products" />
       <PersonalisedRecommendation data-testid="personalised-recommendation" />
-      <Testimonials />
+      <Testimonials data-testid="testimonials-section" />
     </section>
   )
 }
