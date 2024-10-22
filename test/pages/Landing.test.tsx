@@ -25,7 +25,15 @@ describe('Landing Component', () => {
 
   test('renders PersonalisedRecommendation component', () => {
     // Check if PersonalisedRecommendation is rendered
-    const personalisedRecommendation = screen.getByTestId('personalised-recommendation')
+    const personalisedRecommendation = screen.getByTestId(
+      'personalised-recommendation',
+    )
     expect(personalisedRecommendation).toBeInTheDocument()
+  })
+
+  test('renders Testimonials component', () => {
+    // Check if Testimonials is rendered
+    const testimonialsComponent = screen.getByTestId('testimonials-section') // Assuming you add a data-testid to the Testimonials section
+    expect(testimonialsComponent).toBeInTheDocument()
   })
 })

@@ -3,6 +3,7 @@ import {
   FeaturedProducts,
   LandingHero,
   PersonalisedRecommendation,
+  Testimonials,
 } from '../../../components'
 
 const Landing = () => {
@@ -11,6 +12,7 @@ const Landing = () => {
       <LandingHero data-testid="landing-hero" />
       <FeaturedProducts data-testid="featured-products" />
       <PersonalisedRecommendation data-testid="personalised-recommendation" />
+      <Testimonials data-testid="testimonials-section" />
     </section>
   )
 }

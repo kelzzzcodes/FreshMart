@@ -1,0 +1,38 @@
+@use "../../../index.module";
+
+.testimonialCard {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    border-radius: 12px;
+    border: 1px solid #e8e9e9;
+    background: #fff;
+    padding: 8px;
+    min-width: 371px;
+    height: 214px;
+    font-family: index.$font-poppins;
+
+    box-shadow:
+        0px 0px 2px 0px rgba(23, 26, 31, 0.12),
+        0px 0px 1px 0px rgba(23, 26, 31, 0.07);
+    &__top {
+        display: flex;
+        align-items: center;
+        img {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        ul {
+            li {
+                font-size: 24px;
+                font-weight: 700;
+            }
+        }
+    }
+    > p {
+        font-size: 16px;
+    }
+}
