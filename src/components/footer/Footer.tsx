@@ -2,7 +2,7 @@ import styles from './Footer.module.scss'
 
 const Footer = () => {
   return (
-    <footer className={styles.footer}>
+    <footer data-testid="footer" className={styles.footer}>
       <img src="./assets/footerStroke.png" alt="footerStroke" />
       <div className={styles.footer__container}>
         <h3>The Best spot for all your fresh buys</h3>

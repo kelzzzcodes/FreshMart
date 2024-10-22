@@ -22,4 +22,24 @@ describe('Landing Component', () => {
     const featuredProductsComponent = screen.getByTestId('featured-products')
     expect(featuredProductsComponent).toBeInTheDocument()
   })
+
+  test('renders PersonalisedRecommendation component', () => {
+    // Check if PersonalisedRecommendation is rendered
+    const personalisedRecommendation = screen.getByTestId(
+      'personalised-recommendation',
+    )
+    expect(personalisedRecommendation).toBeInTheDocument()
+  })
+
+  test('renders Testimonials component', () => {
+    // Check if Testimonials is rendered
+    const testimonialsComponent = screen.getByTestId('testimonials-section') // Assuming you add a data-testid to the Testimonials section
+    expect(testimonialsComponent).toBeInTheDocument()
+  })
+
+   test('renders the Footer component', () => {
+    // Check if Footer is rendered
+    const footerComponent = screen.getByTestId('footer');
+    expect(footerComponent).toBeInTheDocument();
+  });
 })
