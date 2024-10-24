@@ -36,4 +36,10 @@ describe('Landing Component', () => {
     const testimonialsComponent = screen.getByTestId('testimonials-section') // Assuming you add a data-testid to the Testimonials section
     expect(testimonialsComponent).toBeInTheDocument()
   })
+
+   test('renders the Footer component', () => {
+    // Check if Footer is rendered
+    const footerComponent = screen.getByTestId('footer');
+    expect(footerComponent).toBeInTheDocument();
+  });
 })

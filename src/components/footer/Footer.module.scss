@@ -1,0 +1,62 @@
+@use "../../index.module";
+
+.footer {
+    background-color: index.$footer-bg;
+    margin-top: 5rem;
+    
+    > img {
+        padding-left: 2rem;
+    }
+
+    &__container {
+        color: white;
+        display: flex;
+        padding: 2rem;
+        display: flex;
+
+        > h3 {
+            font-size: 48px;
+            font-family: index.$font-merriweather;
+            flex: 0.9;
+        }
+    }
+
+    @media (min-width: 640px) {
+        > img {
+            padding-left: 4rem;
+        }
+
+        &__container {
+            padding: 3rem;
+
+            > h3 {
+                flex: 0.8;
+            }
+        }
+    }
+
+    @media (min-width: 768px) {
+        > img {
+            padding-left: 8rem;
+        }
+        &__container {
+            padding: 4rem;
+
+            > h3 {
+                flex: 0.6;
+            }
+        }
+    }
+
+    @media (min-width: 1024px) {
+        > img {
+            padding-left: 12rem;
+        }
+        &__container {
+            padding: 7rem;
+            h3 {
+                flex: 0.4;
+            }
+        }
+    }
+}
