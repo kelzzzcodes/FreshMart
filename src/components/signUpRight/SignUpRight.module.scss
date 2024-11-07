@@ -1,0 +1,132 @@
+@use "../../index.module";
+.signUpRight {
+    display: flex;
+    justify-content: center;
+    &__container {
+        border-radius: 16px;
+        background: #fff;
+        box-shadow: 0px 32px 54px -12px rgba(16, 25, 40, 0.18);
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-family: index.$font-poppins;
+
+        &__header {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: center;
+
+            > h2 {
+                color: #192127;
+                font-size: 49px;
+                font-weight: 700;
+            }
+            > p {
+                color: #575858;
+                font-size: 18px;
+            }
+        }
+        &__cta {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: index.$font-poppins;
+            > p {
+                font-size: 18px;
+                color: #575858;
+            }
+        }
+        &__form {
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            &__name {
+                display: flex;
+                gap: 10px;
+
+                &__first {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2px;
+
+                    > input {
+                        padding: 14px 8px;
+                        border-radius: 10px;
+                        background: rgba(224, 225, 226, 0.5);
+                        border: none;
+                        outline: none;
+                    }
+                    > span {
+                        color: red;
+                    }
+                }
+                &__last {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2px;
+                    > input {
+                        padding: 14px 8px;
+                        border-radius: 10px;
+                        background: rgba(224, 225, 226, 0.5);
+                        border: none;
+                        outline: none;
+                    }
+                    > span {
+                        color: red;
+                    }
+                }
+            }
+            &__email {
+                display: flex;
+                > input {
+                    flex: 1;
+                    padding: 14px 8px;
+                    border-radius: 10px;
+                    background: rgba(224, 225, 226, 0.5);
+                    border: none;
+                    outline: none;
+                }
+            }
+            &__password {
+                display: flex;
+                > input {
+                    flex: 1;
+                    padding: 14px 8px;
+                    border-radius: 10px;
+                    background: rgba(224, 225, 226, 0.5);
+                    border: none;
+                    outline: none;
+                }
+            }
+            &__checkbox {
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+                > input[type="checkbox"] {
+                    appearance: none;
+                    border: 2px solid gray;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 6px;
+                }
+                > p {
+                    font-size: 16px;
+                    // max-width: 400px;
+                    > span {
+                        color: #007f6d;
+                    }
+                }
+            }
+        }
+        > p {
+            text-align: center;
+            > a {
+                color: #007f6d;
+            }
+        }
+    }
+}
