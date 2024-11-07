@@ -3,7 +3,7 @@
 .footer {
     background-color: index.$footer-bg;
     margin-top: 5rem;
-    
+
     > img {
         padding-left: 2rem;
     }
@@ -21,7 +21,7 @@
         }
     }
 
-    @media (min-width: 640px) {
+    @media (min-width: index.$breakpoint-sm) {
         > img {
             padding-left: 4rem;
         }
@@ -35,7 +35,7 @@
         }
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: index.$breakpoint-md) {
         > img {
             padding-left: 8rem;
         }
@@ -48,7 +48,7 @@
         }
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: index.$breakpoint-lg) {
         > img {
             padding-left: 12rem;
         }

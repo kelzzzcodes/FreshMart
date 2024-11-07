@@ -1,11 +1,11 @@
+@use "../index.module";
+
 .rootlayout {
-    &__navbar,
     &__body {
         padding: 0 2rem;
     }
 
-    @media (max-width: 768px) {
-        &__navbar,
+    @media (max-width: index.$breakpoint-md) {
         &__body {
             padding: 0 1rem;
         }

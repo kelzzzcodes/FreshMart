@@ -10,9 +10,7 @@ interface RootLayoutProps {
 const RootLayout = ({ children }: RootLayoutProps) => {
   return (
     <div className={styles.rootlayout}>
-      <div className={styles.rootlayout__navbar}>
-        <Navbar />
-      </div>
+      <Navbar />
       <main className={styles.rootlayout__body}>
         {children}
         <Outlet /> {/* This will render nested routes */}

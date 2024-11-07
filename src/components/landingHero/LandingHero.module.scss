@@ -6,7 +6,7 @@
     &__top {
         display: flex;
 
-        .left {
+        &__left {
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -39,7 +39,7 @@
             }
         }
 
-        .right {
+        &__right {
             flex: 1;
             display: flex;
             justify-content: end;
@@ -48,42 +48,6 @@
                 height: 650px;
                 position: absolute;
                 z-index: -1;
-            }
-        }
-
-        // Large screens like laptops
-        @media (max-width: 992px) {
-            .right {
-                display: none;
-            }
-            .left {
-                flex: 1;
-            }
-        }
-        /* Medium screens like tablets */
-        @media (max-width: 768px) {
-            &__left {
-                h1 {
-                    font-size: 40px;
-                    font-weight: 700;
-
-                    margin-top: 2rem;
-                }
-
-                p {
-                    font-weight: 500;
-                    font-size: 16px;
-                    color: index.$greySubText;
-                    line-height: 20px;
-                }
-                ul {
-                    li {
-                        font-size: 12px;
-                        img {
-                            width: 24px;
-                        }
-                    }
-                }
             }
         }
     }
@@ -124,8 +88,37 @@
         }
     }
 
-    // Large screens like laptops
-    @media (max-width: 992px) {
+    @media (max-width: index.$breakpoint-md) {
+        &__top {
+            &__right {
+                display: none;
+            }
+
+            &__left {
+                flex: 1;
+                h1 {
+                    font-size: 40px;
+                    font-weight: 700;
+
+                    margin-top: 2rem;
+                }
+
+                p {
+                    font-weight: 500;
+                    font-size: 16px;
+                    color: index.$greySubText;
+                    line-height: 20px;
+                }
+                ul {
+                    li {
+                        font-size: 12px;
+                        img {
+                            width: 24px;
+                        }
+                    }
+                }
+            }
+        }
         &__bottom {
             margin-top: 100px;
         }
