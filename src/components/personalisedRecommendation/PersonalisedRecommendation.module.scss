@@ -31,13 +31,12 @@
         position: absolute;
         right: 0;
         top: 0;
-        width: 25%;
+        width: 8%;
     }
 
-    // Media query for small devices
-    @media (max-width: 600px) {
-        .personalisedRecommendation__container {
-            width: 80%; // Wider width for small devices
+    @media (max-width: index.$breakpoint-md) {
+        &__container {
+            width: 80%;
             > h2 {
                 font-size: 24px;
             }
@@ -47,10 +46,9 @@
         }
     }
 
-    // Media query for medium devices
-    @media (min-width: 601px) and (max-width: 768px) {
-        .personalisedRecommendation__container {
-            width: 80%; // Wider width for medium devices
+    @media (max-width: index.$breakpoint-xl) {
+        > img {
+            width: 20%;
         }
     }
 }

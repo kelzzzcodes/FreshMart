@@ -3,8 +3,9 @@
 .testimonials {
     background-color: #fff;
     margin-top: 5rem;
+
     &__container {
-        padding: 76px 0;
+        padding: 3rem 2rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -28,7 +29,7 @@
         }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: index.$breakpoint-md) {
         &__container {
             > h2 {
                 font-size: 32px;
@@ -39,7 +40,7 @@
         }
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: index.$breakpoint-sm) {
         &__container {
             > h2 {
                 font-size: 24px;

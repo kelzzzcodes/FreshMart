@@ -19,7 +19,7 @@ const SignUpRight = () => {
   const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data)
 
   return (
-    <section className={styles.signUpRight}>
+    <section data-testid="sign-up-right" className={styles.signUpRight}>
       <div className={styles.signUpRight__container}>
         <div className={styles.signUpRight__container__header}>
           <h2>Create Account</h2>
@@ -80,14 +80,14 @@ const SignUpRight = () => {
           <div className={styles.signUpRight__container__form__checkbox}>
             <input type="checkbox" />
             <p>
-              By creating an account, you agreeing to our
+              By creating an account, you agreeing to our {''}
               <span>Privacy Policy</span> <br /> with
               <span>Terms and Condition</span>
             </p>
           </div>
         </form>
         <p>
-          Already have an account?
+          Already have an account? {''}
           <Link role="link" to="/sign-in">
             Sign In
           </Link>

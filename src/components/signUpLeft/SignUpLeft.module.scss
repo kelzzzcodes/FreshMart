@@ -1,3 +1,17 @@
+@use "../../index.module";
 .signUpLeft {
- 
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    &__bg {
+        width: 600px;
+        object-fit: contain;
+    }
+    &__icon {
+        width: 124px;
+    }
+    @media (max-width: index.$breakpoint-xl) {
+        display: none;
+    }
 }

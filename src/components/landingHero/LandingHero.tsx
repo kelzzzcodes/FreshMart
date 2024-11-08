@@ -8,7 +8,7 @@ const LandingHero = () => {
   return (
     <section className={styles.landingHero}>
       <div className={styles.landingHero__top}>
-        <div className={styles.left}>
+        <div className={styles.landingHero__top__left}>
           <h1>
             Fresh From Our Farm To Your <span>Table</span>
           </h1>
@@ -26,7 +26,7 @@ const LandingHero = () => {
             ))}
           </ul>
         </div>
-        <div className={styles.right}>
+        <div className={styles.landingHero__top__right}>
           <img src="./assets/heroImage.png" alt="Hero image" />
         </div>
       </div>

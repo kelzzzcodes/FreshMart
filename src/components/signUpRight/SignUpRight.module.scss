@@ -1,11 +1,12 @@
 @use "../../index.module";
 .signUpRight {
     display: flex;
+    flex: 1;
     justify-content: center;
     &__container {
         border-radius: 16px;
-        background: #fff;
-        box-shadow: 0px 32px 54px -12px rgba(16, 25, 40, 0.18);
+        background: index.$white-bg;
+        box-shadow: index.$signUpIn-shadow;
         padding: 2rem;
         display: flex;
         flex-direction: column;
@@ -56,12 +57,12 @@
                     > input {
                         padding: 14px 8px;
                         border-radius: 10px;
-                        background: rgba(224, 225, 226, 0.5);
+                        background: index.$signUpIn-input-bg;
                         border: none;
                         outline: none;
                     }
                     > span {
-                        color: red;
+                        color: index.$input-error-color;
                     }
                 }
                 &__last {
@@ -71,12 +72,12 @@
                     > input {
                         padding: 14px 8px;
                         border-radius: 10px;
-                        background: rgba(224, 225, 226, 0.5);
+                        background: index.$signUpIn-input-bg;
                         border: none;
                         outline: none;
                     }
                     > span {
-                        color: red;
+                        color: index.$input-error-color;
                     }
                 }
             }
@@ -86,7 +87,7 @@
                     flex: 1;
                     padding: 14px 8px;
                     border-radius: 10px;
-                    background: rgba(224, 225, 226, 0.5);
+                    background: index.$signUpIn-input-bg;
                     border: none;
                     outline: none;
                 }
@@ -108,16 +109,19 @@
                 align-items: center;
                 > input[type="checkbox"] {
                     appearance: none;
-                    border: 2px solid gray;
+                    border: 2px solid index.$primaryText;
                     width: 20px;
                     height: 20px;
                     border-radius: 6px;
+                    &:checked {
+                        background-color: index.$foundation-green;
+                    }
                 }
                 > p {
                     font-size: 16px;
-                    // max-width: 400px;
+
                     > span {
-                        color: #007f6d;
+                        color: index.$foundation-green;
                     }
                 }
             }
@@ -125,7 +129,7 @@
         > p {
             text-align: center;
             > a {
-                color: #007f6d;
+                color: index.$foundation-green;
             }
         }
     }

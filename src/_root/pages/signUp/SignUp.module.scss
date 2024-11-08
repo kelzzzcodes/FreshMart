@@ -1,18 +1,8 @@
+@use "../../../index.module";
 .signUp {
     display: flex;
+    gap: 20px;
+    align-items: center;
     padding: 3rem;
-
-    &__left {
-        flex: 1;
-    }
-    &__right {
-        flex: 1;
-    }
-
-    // Large screens like laptops
-    @media (max-width: 992px) {
-        &__left {
-            display: none;
-        }
-    }
+    height: 100vh;
 }

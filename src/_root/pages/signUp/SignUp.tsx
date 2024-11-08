@@ -3,13 +3,9 @@ import { SignUpLeft, SignUpRight } from '../../../components'
 
 const SignUp = () => {
   return (
-    <section className={styles.signUp}>
-      <div className={styles.signUp__left}>
-        <SignUpLeft />
-      </div>
-      <div className={styles.signUp__right}>
-        <SignUpRight />
-      </div>
+    <section data-testid="sign-up-section" className={styles.signUp}>
+      <SignUpLeft data-testid="sign-up-left" />
+      <SignUpRight data-testid="sign-up-right" />
     </section>
   )
 }
