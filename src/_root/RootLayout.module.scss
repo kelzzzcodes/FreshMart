@@ -1,0 +1,13 @@
+@use "../index.module";
+
+.rootlayout {
+    &__body {
+        padding: 0 2rem;
+    }
+
+    @media (max-width: index.$breakpoint-md) {
+        &__body {
+            padding: 0 1rem;
+        }
+    }
+}

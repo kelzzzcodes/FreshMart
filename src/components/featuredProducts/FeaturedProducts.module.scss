@@ -18,13 +18,13 @@
         row-gap: 8rem; /* gap on the y-axis */
     }
 
-    @media (min-width: 320px) {
+    @media (min-width: index.$breakpoint-xs) {
         &__card {
             grid-template-columns: repeat(2, 1fr);
         }
     }
 
-    @media (min-width: 640px) {
+    @media (min-width: index.$breakpoint-sm) {
         & h2 {
             font-size: 40px;
         }
@@ -33,13 +33,13 @@
         }
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: index.$breakpoint-lg) {
         &__card {
             grid-template-columns: repeat(4, 1fr);
         }
     }
 
-    @media (min-width: 1280px) {
+    @media (min-width: index.$breakpoint-xl) {
         &__card {
             grid-template-columns: repeat(5, 1fr);
         }
