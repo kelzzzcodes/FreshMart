@@ -17,7 +17,10 @@ const SignUpFormSection = () => {
     watch,
     formState: { errors },
   } = useForm<Inputs>()
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data)
+  const onSubmit: SubmitHandler<Inputs> = (data) => {
+    console.log('Button clicked')
+    console.log('Form Data:', data)
+  }
 
   return (
     <section data-testid="sign-up-right" className={styles.signUpFormSection}>
@@ -31,7 +34,7 @@ const SignUpFormSection = () => {
         </div>
         <form
           className={styles.signUpFormSection__container__form}
-          onSubmit={handleSubmit(onSubmit)}
+          // onSubmit={handleSubmit(onSubmit)}
           role="form"
         >
           <div className={styles.signUpFormSection__container__form__name}>
@@ -74,10 +77,7 @@ const SignUpFormSection = () => {
           </div>
 
           <div className={styles.signUpFormSection__container__form__submit}>
-            <Button
-              onClick={() => console.log('button clicked')}
-              text="Sign Up"
-            />
+            <Button onClick={handleSubmit(onSubmit)} text="Sign Up" />
           </div>
         </form>
         <p>

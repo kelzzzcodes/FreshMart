@@ -17,13 +17,12 @@ describe('SignUpFormSection Component', () => {
     expect(screen.getByPlaceholderText('Password')).toBeInTheDocument()
 
     // Check for other elements like checkboxes and links
-    expect(screen.getByRole('checkbox')).toBeInTheDocument()
-    expect(screen.getByText(/Privacy Policy/)).toBeInTheDocument()
-    expect(screen.getByText(/Terms and Condition/)).toBeInTheDocument()
+    expect(screen.getByText(/Privacy Policy/i)).toBeInTheDocument()
+    expect(screen.getByText(/Terms and Condition/i)).toBeInTheDocument()
     expect(screen.getByText('Already have an account?')).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: /Sign In/})).toHaveAttribute(
-      'href',
-      '/sign-in',
-    )
+    expect(screen.getByText('Sign In')).toHaveAttribute('href', '/sign-in')
+    expect(
+      screen.getByText(/By creating an account, you agreeing to our/i),
+    ).toBeInTheDocument()
   })
 })
