@@ -1,11 +1,11 @@
 import styles from './SignUp.module.scss'
-import { SignUpLeft, SignUpRight } from '../../../components'
+import { SignUpImageSection,SignUpFormSection  } from '../../../components'
 
 const SignUp = () => {
   return (
     <section data-testid="sign-up-section" className={styles.signUp}>
-      <SignUpLeft data-testid="sign-up-left" />
-      <SignUpRight data-testid="sign-up-right" />
+      <SignUpImageSection data-testid="sign-up-left" />
+      <SignUpFormSection data-testid="sign-up-right" />
     </section>
   )
 }

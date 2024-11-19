@@ -1,12 +1,12 @@
 import { render, screen, fireEvent } from '@testing-library/react'
 import { BrowserRouter as Router } from 'react-router-dom'
-import { SignUpRight } from '../../src/components'
+import { SignUpFormSection } from '../../src/components'
 
-describe('SignUpRight Component', () => {
+describe('SignUpFormSection Component', () => {
   test('renders form elements with correct placeholders and labels', () => {
     render(
       <Router>
-        <SignUpRight />
+        <SignUpFormSection />
       </Router>,
     )
 

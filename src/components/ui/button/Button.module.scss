@@ -1,0 +1,8 @@
+@use "../../../index.module";
+.button {
+    background-color: index.$button-bg;
+    border-radius: 8px;
+    color: index.$white-bg;
+    text-align: center;
+    padding: 10px 20px;
+}
