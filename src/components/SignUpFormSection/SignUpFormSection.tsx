@@ -1,6 +1,7 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import styles from './SignUpFormSection.module.scss'
 import { useForm, SubmitHandler } from 'react-hook-form'
+import { useState } from 'react'
 import { Button, InputField } from '../ui'
 
 type Inputs = {
@@ -11,15 +12,41 @@ type Inputs = {
 }
 
 const SignUpFormSection = () => {
+  const navigate = useNavigate()
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm<Inputs>()
-  const onSubmit: SubmitHandler<Inputs> = (data) => {
-    console.log('Button clicked')
-    console.log('Form Data:', data)
+
+  const [message, setMessage] = useState<string | null>(null)
+
+  const mockApiCall = (data: Inputs): Promise<Inputs> => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        if (data.emailAddress === 'fail@example.com') {
+          reject('Failed to submit')
+        } else {
+          resolve(data)
+        }
+      }, 1000)
+    })
+  }
+
+  const onSubmit: SubmitHandler<Inputs> = async (data) => {
+    try {
+      const result = await mockApiCall(data)
+      setMessage('Successful!')
+      setTimeout(() => {
+        localStorage.setItem('user', JSON.stringify(result))
+        navigate('/')
+      }, 2000)
+    } catch (error) {
+      setMessage('Unsuccessful!')
+      setTimeout(() => {
+        setMessage(null)
+      }, 2000)
+    }
   }
 
   return (
@@ -34,9 +61,10 @@ const SignUpFormSection = () => {
         </div>
         <form
           className={styles.signUpFormSection__container__form}
-          // onSubmit={handleSubmit(onSubmit)}
+          onSubmit={handleSubmit(onSubmit)}
           role="form"
         >
+          {message && <p>{message}</p>}
           <div className={styles.signUpFormSection__container__form__name}>
             <InputField
               type="text"
@@ -77,7 +105,7 @@ const SignUpFormSection = () => {
           </div>
 
           <div className={styles.signUpFormSection__container__form__submit}>
-            <Button onClick={handleSubmit(onSubmit)} text="Sign Up" />
+            <Button text="Sign Up" />
           </div>
         </form>
         <p>
