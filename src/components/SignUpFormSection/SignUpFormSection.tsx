@@ -1,6 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom'
 import styles from './SignUpFormSection.module.scss'
-import { useForm, SubmitHandler } from 'react-hook-form'
+import { useForm, SubmitHandler as submitHandler } from 'react-hook-form'
 import { useState } from 'react'
 import { Button, InputField } from '../ui'
 
@@ -33,7 +33,7 @@ const SignUpFormSection = () => {
     })
   }
 
-  const onSubmit: SubmitHandler<Inputs> = async (data) => {
+  const onSubmit: submitHandler<Inputs> = async (data) => {
     try {
       const result = await mockApiCall(data)
       setMessage('Successful!')
