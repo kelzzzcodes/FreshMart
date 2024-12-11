@@ -1,0 +1,37 @@
+@use "../../../index.module";
+.inputField {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    &__inputs {
+        width: 100%;
+        padding: 14px 8px;
+        border-radius: 10px;
+        background: index.$signUpIn-input-bg;
+        border: none;
+        outline: none;
+
+        &[type="checkbox"] {
+            padding: 0 !important;
+            appearance: none;
+            border: 2px solid index.$primaryText;
+            width: 20px;
+            height: 20px;
+            border-radius: 6px;
+
+            &:checked {
+                background-color: index.$foundation-green;
+            }
+        }
+    }
+    &__error {
+        color: index.$input-error-color;
+        font-size: 14px;
+    }
+    @media (max-width: index.$breakpoint-sm) {
+        &__error {
+            font-size: 10px;
+        }
+    }
+}

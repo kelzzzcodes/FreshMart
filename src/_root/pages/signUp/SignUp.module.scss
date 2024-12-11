@@ -1,0 +1,11 @@
+@use "../../../index.module";
+.signUp {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 3rem;
+
+    @media (max-width: index.$breakpoint-sm) {
+        padding: 0.5rem;
+    }
+}

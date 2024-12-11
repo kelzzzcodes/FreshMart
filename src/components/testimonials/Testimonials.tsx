@@ -1,10 +1,10 @@
-import React from 'react'
 import styles from './Testimonials.module.scss'
-import TestimonialCard from '../ui/testimonialCard/TestimonialCard'
-import { testimonialCardItems } from '../../data'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination, A11y, Navigation } from 'swiper/modules'
+import { TestimonialCard } from '../ui'
 
+import { testimonialCardItems } from '../../data'
+
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Navigation } from 'swiper/modules'
 import 'swiper/swiper-bundle.css'
 
 const Testimonials = () => {

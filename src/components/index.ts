@@ -4,6 +4,8 @@ import FeaturedProducts from './featuredProducts/FeaturedProducts'
 import PersonalisedRecommendation from './personalisedRecommendation/PersonalisedRecommendation'
 import Testimonials from './testimonials/Testimonials'
 import Footer from './footer/Footer'
+import SignUpImageSection from './SignUpImageSection/SignUpImageSection'
+import SignUpFormSection from './SignUpFormSection/SignUpFormSection'
 export {
   Navbar,
   LandingHero,
@@ -11,4 +13,6 @@ export {
   PersonalisedRecommendation,
   Testimonials,
   Footer,
+  SignUpImageSection,
+  SignUpFormSection,
 }
